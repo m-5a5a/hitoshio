@@ -1,0 +1,329 @@
+@charset "UTF-8";
+/*================normalize.cssに追加するリセット=================*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  html{
+      font-size: 62.5%;
+  }
+  body{
+    width:100%;
+    height: 100%;
+    font-family: "Roboto", "Noto Sans JP", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-size:1.6rem;
+    line-height:1.8;
+    color: #888;
+  }
+  input,textarea{
+    font-size: 16px;
+    font-family: "Roboto", "Noto Sans JP", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  }
+  .wrapper{
+    overflow: hidden;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6{
+    margin:0;
+    padding:0;
+    font-weight:normal;
+    color:#595757;
+    line-height:1;
+  }
+  a{
+    text-decoration:none;
+    color:#595757;
+    outline: none;
+  }
+  img{
+    vertical-align:bottom;
+    /*==================フルードイメージ==================*/
+    max-width: 100%;
+  }
+  ul,
+  ol{
+    list-style-type:none;
+  }
+  /*================normalize.cssに追加するリセットここまで=================*/
+
+/* centering contents */
+.inner{
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inner500{
+  max-width: 500px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* header */
+.header{
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    filter: drop-shadow(1px 1px 3px #888);
+}
+.header .inner{
+    display: flex;
+    justify-content: space-between;
+}
+.header img{
+  height: 40px;
+}
+
+/* humberger menu */
+#trigger{
+    display: none;
+}
+.trigger_btn{
+    display: none;
+}
+
+/* navigation */
+.nav{
+  display: flex;
+  align-items: center;
+}
+.nav ul{
+    display: flex;
+    line-height: 1;
+}
+.nav li{
+    margin-left: 50px;
+    display: flex;
+}
+.shop{
+  display: flex;
+  align-items: center;
+  color: #595757;
+}
+.login, .cart{
+  display: flex;
+}
+.shop img{
+  margin-left: 30px;
+}
+
+.header .title{
+  padding-left: 10px;
+  margin-top: 10px;
+}
+
+/* key visual */
+#video-area{
+    position: fixed;
+    z-index: -1;/*最背面に設定*/
+    top: 60px;
+    right:0;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+}
+#video {
+    /*天地中央配置*/
+    position: relative;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*縦横幅指定*/
+    width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+}
+.key-visual h2{
+  position: absolute;
+  margin-top: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0px 0px 2px #999);
+}
+
+/* scrool bar */
+.scroll a {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  z-index: 2;
+  padding: 10px 10px 110px;
+  overflow: hidden;
+  color: #888;
+  font-size: 14px;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  /* writing-mode: vertical-lr; */
+  transform: translateX(-50%)
+}
+.scroll a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  height: 100px;
+  background: #888;
+}
+
+.scroll a::after {
+  animation: sdl 2s cubic-bezier(1, 0, 0, 1) infinite;
+}
+@keyframes sdl {
+  0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+  }
+  35% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+  }
+  35.1% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+  70%, 100% {
+    transform: scale(1, 0);
+    transform-origin: 0 100%;
+  }
+}
+
+/* main contents */
+#container{
+  margin-top:100vh;
+  background:#fff;
+}
+.main-copy-cont{
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,226,202,1) 100%);
+}
+.main-copy{
+  text-align: center;
+  padding: 100px;
+}
+.main-copy h3{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 50px;
+}
+.main-copy h4{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* products & about us */
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
+.main-cont{
+  padding: 300px 0;
+  display: flex;
+  flex-direction: column;
+}
+.cont{
+  display: flex;
+  align-items: center;
+}
+.cont:nth-child(1){
+  margin-bottom: 300px;
+}
+.cont:nth-child(2){
+  flex-direction: row-reverse;
+}
+
+.cont img{
+  max-width: 50vw;
+}
+
+.text{
+  margin-top: 100px;
+}
+.see-more img{
+  height: 20px;
+  margin-top: 70px;
+}
+
+/* footer */
+.footer{
+  width: 100%;
+  background-color: #666;
+  color: #fff;
+  text-align: center;
+  align-items: center;
+  padding: 10px 0;
+}
+.guide{
+  display: flex;
+  padding: 50px 0px;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+.footer ul{
+  display: flex;
+}
+.footer li{
+  justify-content: space-between;
+  padding-right: 50px;
+}
+
+/* ------------- animation ------------- */
+
+/* 下からフェードイン */
+.slide-bottom {
+	opacity: 0;
+	transform: translate(0, 20px);
+	transition: all 1s ease-out;
+  }
+
+/* 左からフェードイン */
+.slide-left {
+	opacity: 0;
+	transform: translate(-20px, 0);
+	transition: all 1s ease-out;
+  }
+
+/* 右からフェードイン */
+.slide-right {
+	opacity: 0;
+	transform: translate(20px, 0);
+	transition: all 1s ease-out;
+  }
+
+/* ふんわり出てくる */
+.fade-in{
+  opacity:0;
+  transition: all 2s ease-out;
+}
+
+/* ホバー */
+h1:hover,
+.nav li:hover,
+.login:hover,
+.cart:hover,
+.see-more:hover,
+.cont h4:hover{
+  opacity: 0.6;
+}
